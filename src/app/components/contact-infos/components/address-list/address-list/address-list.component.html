@@ -1,0 +1,29 @@
+<div *ngFor="let address of addressesListToDisplay">
+  <div class="p-4 grid sm:grid-cols-2 lg:grid-cols-6">
+    <app-user-info-item
+      label="Tipo:"
+      value="{{ address.typeDescription }}"
+    ></app-user-info-item>
+    <app-user-info-item
+      label="Rua:"
+      value="{{ address.street }}"
+    ></app-user-info-item>
+    <app-user-info-item
+      label="Complemento:"
+      value="{{ address.complement }}"
+    ></app-user-info-item>
+    <app-user-info-item
+      label="País:"
+      value="{{ address.country }}"
+    ></app-user-info-item>
+    <app-user-info-item
+      label="Estado:"
+      value="{{ address.state }}"
+    ></app-user-info-item>
+    <app-user-info-item
+      label="Cidade:"
+      value="{{ address.city }}"
+    ></app-user-info-item>
+  </div>
+  <hr class="block lg:hidden" />
+</div>
