@@ -1,0 +1,53 @@
+<div class="p-4">
+  <div class="p-4 grid lg:grid-cols-3">
+    <div>
+      <app-user-info-item
+        label="Nome"
+        [value]="user?.name"
+      ></app-user-info-item>
+    </div>
+    <div>
+      <app-user-info-item
+        label="Email"
+        [value]="user?.email"
+      ></app-user-info-item>
+    </div>
+  </div>
+  <div class="p-4 grid lg:grid-cols-3">
+    <div>
+      <app-user-info-item
+        label="País"
+        [value]="user?.country"
+      ></app-user-info-item>
+    </div>
+    <div>
+      <app-user-info-item
+        label="Estado"
+        [value]="user?.state"
+      ></app-user-info-item>
+    </div>
+  </div>
+  <div class="p-4 grid lg:grid-cols-3">
+    <div>
+      <app-user-info-item
+        label="Estado Civil"
+        [value]="user?.maritalStatus | maritalStatus"
+      ></app-user-info-item>
+    </div>
+    <div>
+      <app-user-info-item
+        label="Renda Mensal"
+        [value]="
+          user?.monthlyIncome?.toString()
+            | currency: 'BRL' : 'symbol' : '1.2-2' : 'pt-BR'
+        "
+      ></app-user-info-item>
+    </div>
+    <div>
+      <app-user-info-item
+        label="Data de Nascimento"
+        [value]="user?.birthDate"
+      ></app-user-info-item>
+    </div>
+  </div>
+</div>
