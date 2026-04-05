@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
-import { ICitiesResponse } from '../interfaces/cities-response/cities-response';
+import { ICitiesResponse } from '../interfaces/cities-response/cities-response.interface';
 
 @Injectable({
   providedIn: 'root',
